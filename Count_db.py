@@ -33,6 +33,8 @@ def create_table():
 
 # 测试
 if __name__ == '__main__':
+    cur.execute('CREATE TABLE IF NOT EXISTS Counts (count INTEGER)')
+    # 这里没写删除数据库和数据库数据的函数，应跟 QnA_db.py类似
     st.title("Count_Test")
     st.write("This is a test of the count function")
     st.sidebar.title("Count_Test")
