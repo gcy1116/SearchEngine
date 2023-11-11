@@ -18,9 +18,6 @@ def count_main():
     c.execute('DELETE FROM Counts')
     c.execute('INSERT INTO Counts VALUES (?)', (count,))
     conn.commit()
-    # st.markdown("<br>" * 10, unsafe_allow_html=True)
-    # st.write(f"Been visited {count} times!")
-
     conn.close()
     return count
 
