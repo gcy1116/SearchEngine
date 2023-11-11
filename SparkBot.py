@@ -17,18 +17,6 @@ import Count_db
 import websocket  # 使用websocket_client
 answer = ""
 
-# appid = "2aa903c6"     #填写控制台中获取的 APPID 信息
-# api_secret = "NmQxOTUzYWQ4YTBkNjZjZTZlOWQyMGFl"   #填写控制台中获取的 APISecret 信息
-# api_key ="7f20fa7bdc0a1eb59141f6c240a793f8"    #填写控制台中获取的 APIKey 信息
-
-# #用于配置大模型版本，默认“general/generalv2”
-# #和云端环境的服务地址
-# # domain = "general"   # v1.5版本
-# # Spark_url = "ws://spark-api.xf-yun.com/v1.1/chat"  # v1.5环境的地址
-# domain = "generalv2"    # v2.0版本
-# Spark_url = "ws://spark-api.xf-yun.com/v2.1/chat"  # v2.0环境的地址
-
-
 class Ws_Param(object):
     # 初始化
     def __init__(self, APPID, APIKey, APISecret, Spark_url):
@@ -176,15 +164,8 @@ def checklen(text):
     while (getlength(text) > 8000):
         del text[0]
     return text
-    
-# def get_response(input_text):
-#     text.clear()
-#     question = checklen(getText("user", input_text))
-#     SparkApi.answer = ""
-#     response = SparkApi.main(appid, api_key, api_secret, Spark_url, domain, question)
-#     getText("assistant", SparkApi.answer)
-#     return response
 
+# 测试
 if __name__ == '__main__':
     st.title("🦜🔗 Spark Quickstart App")
     st.markdown(f"""
