@@ -3,18 +3,14 @@ import SparkBot
 import Count_db
 import QnA_db
 
-# appid = "2aa903c6"     #填写控制台中获取的 APPID 信息
-# api_secret = "NmQxOTUzYWQ4YTBkNjZjZTZlOWQyMGFl"   #填写控制台中获取的 APISecret 信息
-# api_key ="7f20fa7bdc0a1eb59141f6c240a793f8"    #填写控制台中获取的 APIKey 信息
+appid = "xxxxxxx"     #填写控制台中获取的 APPID 信息
+api_secret = "xxxxxxx"   #填写控制台中获取的 APISecret 信息
+api_key = "xxxxxxx"    #填写控制台中获取的 APIKey 信息
 
-appid = "c4075a29"
-api_secret = "YmFlMTIwN2U3MDQzNWVmZTIyMzgxZjk5"
-api_key = "6a074c0ded4929138650038b0125a7f7"
 
-# 用于配置大模型版本，默认“general/generalv2”
-# 和云端环境的服务地址
-domain = "generalv3"   # v3.0版本
-Spark_url = "ws://spark-api.xf-yun.com/v3.1/chat"  # v3.0环境的地址
+
+domain = "generalv3"   # 用于配置大模型版本，默认“general/generalv2”
+Spark_url = "ws://spark-api.xf-yun.com/v3.1/chat"  # 云端环境的服务地址
 # domain = "generalv2"    # v2.0版本
 # Spark_url = "ws://spark-api.xf-yun.com/v2.1/chat"  # v2.0环境的地址
 st.title("🧐🔗 Search Assitant")
@@ -100,5 +96,4 @@ if send:
 if st.button("清除历史记录"):
     QnA_db.delete_records_by_user_id(userID)
     st.empty()
-    # st.rerun()
     st.info('History Cleared')
